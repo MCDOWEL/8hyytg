@@ -1,0 +1,10 @@
+package com;
+
+public class JobAlreadyExistsException extends Exception {
+
+	JobAlreadyExistsException(){
+		System.out.println("Job already exists in the given Category");
+	}
+	
+	
+}
