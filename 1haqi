@@ -1,0 +1,75 @@
+package com;
+
+import java.util.ArrayList;
+
+public class Category {
+	private int categoryId;
+	private String categoryName;
+	private String skillSet;
+	private ArrayList<Job> joblst = new ArrayList<Job>();
+	private ArrayList<ContractJob> cjoblst = new ArrayList<ContractJob>();
+	
+	
+	public ArrayList<ContractJob> getCjoblst() {
+		return cjoblst;
+	}
+
+
+	public void setCjoblst(ArrayList<ContractJob> cjoblst) {
+		this.cjoblst = cjoblst;
+	}
+
+
+	public Category(int categoryId, String categoryName, String skillSet) {
+		
+		this.categoryId = categoryId;
+		this.categoryName = categoryName;
+		this.skillSet = skillSet;
+	}
+
+
+	public int getCategoryId() {
+		return categoryId;
+	}
+
+
+	public void setCategoryId(int categoryId) {
+		this.categoryId = categoryId;
+	}
+
+
+	public String getCategoryName() {
+		return categoryName;
+	}
+
+
+	public void setCategoryName(String categoryName) {
+		this.categoryName = categoryName;
+	}
+
+
+	public String getSkillSet() {
+		return skillSet;
+	}
+
+
+	public void setSkillSet(String skillSet) {
+		this.skillSet = skillSet;
+	}
+
+
+	public ArrayList<Job> getJoblst() {
+		return joblst;
+	}
+
+
+	public void setJoblst(ArrayList<Job> joblst) {
+		this.joblst = joblst;
+	}
+	
+	
+	
+	
+	
+
+}
