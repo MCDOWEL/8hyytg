@@ -1,0 +1,9 @@
+package com;
+
+public class JobDoesnotExistException extends Exception {
+	
+	JobDoesnotExistException(int id){
+		System.out.println("This id "+id+" doesn't exist");
+	}
+
+}
