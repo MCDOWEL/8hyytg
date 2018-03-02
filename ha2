@@ -1,0 +1,23 @@
+package com;
+
+public class ContractJob extends Job{
+	
+	String contractPeriodInMonth;
+
+	public ContractJob(int jobId, String jobDescription, int vacancy,
+			double salary, String location, String contractPeriodInMonth) {
+		super(jobId, jobDescription, vacancy, salary, location);
+		this.contractPeriodInMonth = contractPeriodInMonth;
+	}
+
+	public String getContractPeriodInMonth() {
+		return contractPeriodInMonth;
+	}
+
+	public void setContractPeriodInMonth(String contractPeriodInMonth) {
+		this.contractPeriodInMonth = contractPeriodInMonth;
+	}
+	
+	
+
+}
