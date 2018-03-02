@@ -1,0 +1,63 @@
+package com;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+public class Test {
+
+	
+	public static void main(String[] args) {
+		
+		OnlineJobPortalManagement nau = new OnlineJobPortalManagement(54678, "Naukari");
+		
+		Category c1 = new Category(1, "developer", "Visulabasic,html");
+		Job j1 = new Job(100, "javadev", 100, 20000, "Delhi");
+		Job j2 = new Job(101, "phpdev", 200, 30000, "Hyderabad");
+		ContractJob cj3 = new ContractJob(1056, "DATAADMIN", 80, 1000, "tiv","12");
+		ContractJob cj1 = new ContractJob(109, "DATAADMIN", 80, 1000, "tiv","12");
+		ContractJob cj2 = new ContractJob(10, "DATAADMIN", 80, 1000, "tiv","12");
+		
+		System.out.println(nau.addCategory(c1));
+	
+		
+		try{
+			
+			System.out.println(nau.tagJobToCategory(1,j1));
+			System.out.println(nau.tagJobToCategory(1, j2));
+			System.out.println(nau.tagJobToCategory(1, cj1));
+			System.out.println(nau.tagJobToCategory(1, cj2));
+			System.out.println(nau.tagJobToCategory(1, cj3));
+			
+			System.out.println(nau.updateJobVacancy(100, 50));
+			//System.out.println(nau.updateJobVacancy(102, 50));
+			
+			
+			HashMap<Integer, Job> hm = new HashMap<Integer, Job> ();
+			hm = nau.getHighestSalary();
+			
+			for(Map.Entry<Integer, Job> temp: hm.entrySet())
+			{
+				System.out.println(temp.getKey());
+				System.out.println(temp.getValue().getSalary());
+			}
+			ArrayList<ContractJob> al=new  ArrayList<ContractJob>();
+			al=nau.getContractJobsByLocation("tiv");
+			
+			for (ContractJob contractJob : al) {
+				System.out.println(contractJob.getJobId());
+				
+				
+			}
+			
+			
+		}
+		
+		catch(Exception e){
+			
+		}
+		
+
+	}
+
+}
